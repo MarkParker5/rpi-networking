@@ -76,39 +76,30 @@ ff02::1\tip6-allnodes
 ff02::2\tip6-allrouters
 """
 
-
 def write(file: str, content: str):
     with open(file, "w") as f:
         f.write(content)
 
-
 def write_interfaces():
     write(interfaces_path, network_interfaces_content)
-
 
 def write_default_hostapd():
     write(default_hostapd_path, default_hostapd_content)
 
-
 def write_hostapd_conf():
     write(hostapd_conf_path, hostapd_conf_content)
-
 
 def write_dnsmasq_conf():
     write(dnsmaq_conf_path, dnsmasq_conf_content)
 
-
 def write_wpa_supplicant(country: str = "GB"):
     write(wpa_supplicant_path, wpa_supplicant_content(country))
-
 
 def write_hosts():
     write(hosts_path, hosts_content)
 
-
 def enable_spi():
     set_config_value("dtparam", "spi=on", boot_config_path)
-
 
 def write_all():
     write_interfaces()
