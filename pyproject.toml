@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "rpi-networking"
+version = "0.1.0"
+description = "Control wifi, hotspot and hostname of Raspberry Pi"
+authors = ["Mark Parker <mark@parker-programs.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "rpi_networking"}]
+homepage = "https://pypi.org/project/rpi-networking/"
+repository = "https://github.com/MarkParker5/rpi-networking"
+documentation = "https://github.com/MarkParker5/rpi-networking/blob/master/README.md"
+keywords = ["raspberry-pi", "python", "python3", "raspberry-pi", "rpi", "raspberrypi", "raspbian", "raspberry-pi-zero-w", "rpi-zero-w", "rpi4", "linux", "debian"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
