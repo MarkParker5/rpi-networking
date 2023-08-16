@@ -1,8 +1,8 @@
-import configuration
-import hostname
-import hotspot
-import status
-import wifi
+from . import configuration
+from . import hostname
+from . import hotspot
+from . import status
+from . import wifi
 
 
 def start_hotspot_if_needed():
