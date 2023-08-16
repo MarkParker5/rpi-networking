@@ -74,7 +74,7 @@ done;
 There are functions for initial configuration setup.
 
 ```python
-# rpi-networking.configuraion
+# rpi_networking.configuraion
 
 def write_interfaces():
 
@@ -98,7 +98,7 @@ def write_all(): # calls all functions above
 ### Hostname
 
 ```python
-# rpi-networking.hostname
+# rpi_networking.hostname
 
 def set_hostname(hostname: str):
     
@@ -108,7 +108,7 @@ def restart_interfaces():  # apply new hostname without reboot
 ### Hotspot
 
 ```python
-# rpi-networking.hotspot
+# rpi_networking.hotspot
 
 is_hotspot_running: bool
 
@@ -122,7 +122,7 @@ The `bool` return value is `True` if function finished without errors (exit code
 ### Status
 
 ```python
-# rpi-networking.status
+# rpi_networking.status
 
 def is_wlan_connected() -> bool:
 
@@ -138,7 +138,9 @@ def is_wps_running() -> bool:
 ### WiFi
 
 ```python
-# rpi-networking.wifi
+# rpi_networking.wifi
+
+country: str = 'GB' # country code for wpa_supplicant
 
 class InterfaceBusyException(Exception): 
     pass

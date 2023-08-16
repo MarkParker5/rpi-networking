@@ -3,14 +3,18 @@ from dataclasses import dataclass
 from subprocess import CalledProcessError
 from typing import Generator
 
-from configuration import (
+from .configuration import (
     interfaces_path,
     network_interfaces_content,
     wpa_supplicant_content,
     wpa_supplicant_path,
 )
-from tools import call_subprocess, check_subprocess_output
+from .tools import call_subprocess, check_subprocess_output
 
+
+# Variables
+
+country: str = 'GB'
 
 # String parsing
 
@@ -61,7 +65,7 @@ def read_networks() -> list[Network]:
 
 def write_networks(networks: list[Network]):
     with open(wpa_supplicant_path, "w") as f:
-        f.write(wpa_supplicant_content)
+        f.write(wpa_supplicant_content(country))
 
         for i, network in enumerate(networks):
             f.write(network_record(network, i))

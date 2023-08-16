@@ -1,7 +1,7 @@
 import time
 
-from configuration import hosts_content, hosts_path
-from tools import call_subprocess
+from .configuration import hosts_content, hosts_path
+from .tools import call_subprocess
 
 
 def set_hostname(hostname: str):

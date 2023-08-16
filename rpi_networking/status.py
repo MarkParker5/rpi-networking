@@ -1,4 +1,4 @@
-from tools import call_subprocess
+from .tools import call_subprocess
 
 
 def is_wlan_connected() -> bool:

@@ -1,4 +1,4 @@
-from tools import set_config_value
+from .tools import set_config_value
 
 
 boot_config_path = r"/boot/config.txt"

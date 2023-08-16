@@ -1,4 +1,4 @@
-from tools import call_subprocess
+from .tools import call_subprocess
 
 
 is_hotspot_running: bool = False
