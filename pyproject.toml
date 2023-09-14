@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rpi-networking"
-version = "0.1.6"
+version = "0.1.7"
 description = "Control wifi, hotspot and hostname of Raspberry Pi"
 authors = ["Mark Parker <mark@parker-programs.com>"]
 license = "MIT"
