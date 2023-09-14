@@ -1,7 +1,3 @@
-from .tools import set_config_value
-
-
-boot_config_path = r"/boot/config.txt"
 interfaces_path = r"/etc/network/interfaces"
 default_hostapd_path = r"/etc/default/hostapd"
 hostapd_conf_path = r"/etc/hostapd/hostapd.conf"
@@ -98,9 +94,6 @@ def write_wpa_supplicant(country: str = "GB"):
 def write_hosts():
     write(hosts_path, hosts_content)
 
-def enable_spi():
-    set_config_value("dtparam", "spi=on", boot_config_path)
-
 def write_all():
     write_interfaces()
     write_default_hostapd()
@@ -108,4 +101,3 @@ def write_all():
     write_dnsmasq_conf()
     write_wpa_supplicant()
     write_hosts()
-    enable_spi()

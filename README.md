@@ -51,7 +51,6 @@ Give user permission to edit configuration files so python doesn't have to be ru
 
 ```sh
 files=(
-  "/boot/config.txt"
   "/etc/dnsmasq.conf"
   "/etc/hosts"
   "/etc/default/hostapd"
@@ -87,8 +86,6 @@ def write_dnsmasq_conf():
 def write_wpa_supplicant(country: str = "GB"):
 
 def write_hosts():
-
-def enable_spi():
 
 def write_all(): # calls all functions above
 ```

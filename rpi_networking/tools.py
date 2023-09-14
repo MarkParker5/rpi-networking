@@ -27,7 +27,7 @@ def check_subprocess_output(command: str) -> str:
     except subprocess.CalledProcessError:
         return ""
 
-# Boot config
+# Boot config (/boot/config.txt) - deprecated and not used anymore but can be useful
 
 def read_config(config_file: str) -> dict[str, str]:
     config = {}
