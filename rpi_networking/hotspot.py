@@ -15,7 +15,7 @@ def start_hotspot() -> bool:
         "sudo service dhcpcd start",
     ]
 
-    if call_subprocess(" && ".join(commands)):
+    if call_subprocess("; ".join(commands)):
         return is_hotspot_up()
     else:
         return False
