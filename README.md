@@ -107,7 +107,7 @@ def restart_interfaces():  # apply new hostname without reboot
 ```python
 # rpi_networking.hotspot
 
-is_hotspot_running: bool
+def is_hotspot_up() -> bool:
 
 def start_hotspot() -> bool:
     

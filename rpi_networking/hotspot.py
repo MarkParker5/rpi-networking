@@ -1,7 +1,8 @@
 from .tools import call_subprocess
 
 
-is_hotspot_running: bool = False
+def is_hotspot_up() -> bool:
+    return call_subprocess('ip link show ap0 | grep "state UP"')
 
 def start_hotspot() -> bool:
     commands = [
@@ -15,16 +16,12 @@ def start_hotspot() -> bool:
     ]
 
     if call_subprocess(" && ".join(commands)):
-        global is_hotspot_running
-        is_hotspot_running = True
-        return True
+        return is_hotspot_up()
     else:
         return False
 
 def stop_hotspot() -> bool:
     if call_subprocess("sudo service hostapd stop"):
-        global is_hotspot_running
-        is_hotspot_running = False
-        return True
+        return not is_hotspot_up()
     else:
         return False
