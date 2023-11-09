@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt upgrade -y
+# sudo apt upgrade -y
 sudo apt install dnsmasq hostapd dhcpd -y
 
 # give user permission to edit files so python doesn't have to be run as root (sudo)
