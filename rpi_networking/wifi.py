@@ -32,7 +32,8 @@ network={{
         ssid="{network.ssid}"
         psk="{network.psk}"
         id_str="AP{i}"
-}}"""
+}}
+"""
 )
 
 # Models
