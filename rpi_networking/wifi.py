@@ -75,7 +75,7 @@ def write_networks(networks: list[Network]):
         f.write(network_interfaces_content)
 
         for i in range(len(networks)):
-            f.write(f"iface AP{i} inet dhcp")
+            f.write(f"iface AP{i} inet dhcp\n")
 
 def add_network(ssid: str, psk: str):
     networks = read_networks()
